@@ -96,4 +96,16 @@ def diamend(N):
         for j in range(2*(N-i)-1):
             print("*",end=' ')
         print()
-print(diamend(5))
+# print(diamend(5))
+
+# printed the startrotated pattern
+def startrotated(N):
+    for i in range(N):
+        for j in range(i+1):
+            print("*",end='')
+        print()
+    for i in range(N-1,0,-1):
+        for j in range(i):
+            print("*",end='')
+        print()
+# print(startrotated(5))
