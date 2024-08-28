@@ -60,3 +60,24 @@ def trianglenumreversed(N):
             num+=1
         print()
 # print(trianglenumreversed(5))
+
+# print a centered triangle of asterisks with N rows.
+def Triangle(N):
+    for i in range(N):
+        for j in range(N-i-1):
+            print(" ",end='')
+        for j in range(2*i+1):
+            print("*",end='')
+        print()
+# print(Triangle(5))
+
+# print a centered triangle in reversed of asterisks with N rows
+def triangle(N):
+    for i in range(N):
+        for j in range(i):
+            print(" ",end='')
+        for j in range(2*(N-i)-1):
+            print("*",end='')
+        print()
+# print(t(5))
+
