@@ -46,4 +46,17 @@ def triangleReverse(N):
         for j in range(i):
             print("*",end='')
         print()
-print(triangleReverse(5))
+# print(triangleReverse(5))
+
+
+#  printTriangle in reversed which takes an integer n  as the input
+
+
+def trianglenumreversed(N):
+    for i in range(N,0,-1):
+        num=1
+        for j in range(i):
+            print(num,end='')
+            num+=1
+        print()
+# print(trianglenumreversed(5))
