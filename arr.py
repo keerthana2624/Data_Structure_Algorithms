@@ -41,6 +41,11 @@ def removeDuplivates(arr):
     for i in range(len(new_arr)):
         arr[i]=new_arr[i]
     return new_arr
-print(removeDuplivates([1,3,2,4,3,2]))
+# print(removeDuplivates([1,3,2,4,3,2]))
 
-
+# implimented the  rotateArray
+def rotateArray(arr):
+    # Write your code from here.
+    new_arr=arr[2:]+arr[:2]
+    print(new_arr)
+# print(rotateArray([1,2,3,4]))
