@@ -34,7 +34,6 @@ def sortedornot(a):
 # print(sortedornot([1,10,3,4,2]))
 
 
-
 # removed duplicated from the arr
 def removeDuplivates(arr):
     new_arr=sorted(set(arr))
@@ -43,12 +42,14 @@ def removeDuplivates(arr):
     return new_arr
 # print(removeDuplivates([1,3,2,4,3,2]))
 
+
 # implimented the  left rotateArray
 def rotateArray(arr):
     # Write your code from here.
     new_arr=arr[2:]+arr[:2]
     print(new_arr)
 # print(rotateArray([1,2,3,4]))
+
 
 # moved zeros in an array to the end
 def movezeros(arr):
@@ -63,5 +64,12 @@ def movezeros(arr):
         if num==0:
             result2.append(num)
     return result1+result2
-print(movezeros([1,2,0,0,0,3]))
+# print(movezeros([1,2,0,0,0,3]))
 
+
+# finding the number in the array
+def findingNum(arr):
+    for i in range(len(arr)):
+        if arr[i]==3:
+            print(i)
+print(findingNum([1,3,5,3,6]))
