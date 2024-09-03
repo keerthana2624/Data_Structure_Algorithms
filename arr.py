@@ -72,4 +72,19 @@ def findingNum(arr):
     for i in range(len(arr)):
         if arr[i]==3:
             print(i)
-print(findingNum([1,3,5,3,6]))
+# print(findingNum([1,3,5,3,6]))
+
+
+def sortedArray(a,b):
+    x=a+b
+    sort=sorted(set(x))
+    print(sort)
+# print(sortedArray([1,2,4],[2,3,5]))
+
+
+def numstriangle(n):
+    for i in range(n):
+        for j in range(i):
+            print(j+i,end='')
+        print()
+print(numstriangle(4))
