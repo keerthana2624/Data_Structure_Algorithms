@@ -26,4 +26,18 @@ def Binary(arr,target):
 # print(Binary([1,4,6,8,9,11],1))
 # print(Binary([],8))
 
+# selection sort
+
+def selectionSort(arr):
+    for i in range(len(arr)):
+       small=i
+       for j in range(i+1,len(arr)):
+           if arr[j]<arr[small]:
+               small=j
+       arr[i], arr[small] = arr[small], arr[i]
+    return arr
+# print(selectionSort([2,6,3,7,1,9]))
+
+
+
 
