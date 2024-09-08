@@ -36,7 +36,7 @@ def Numberpyramid(N):
         for j in range(i+1):
             print(n,end='')
         print()
-# print(Numberpyramid(5))
+print(Numberpyramid(5))
 
 
 # triangle in reversed order
@@ -46,7 +46,7 @@ def triangleReverse(N):
         for j in range(i):
             print("*",end='')
         print()
-# print(triangleReverse(5))
+print(triangleReverse(5))
 
 
 #  printTriangle in reversed which takes an integer n  as the input
@@ -108,4 +108,4 @@ def startrotated(N):
         for j in range(i):
             print("*",end='')
         print()
-# print(startrotated(5))
+print(startrotated(5))
