@@ -8,3 +8,22 @@ def Linear(arr,target):
 # print(Linear([1,4,2,6],9))
 # print(Linear([],4))
 
+# binary search
+
+def Binary(arr,target):
+    left=0
+    right=len(arr)-1
+    while left<=right:
+        mid=left+(right-left)//2
+        if arr[mid]==target:
+            return mid
+        if target>arr[mid]:
+            left=mid+1
+        else:
+            right=mid-1
+    return -1
+# print(Binary([1,4,6,8,9,11],8))
+# print(Binary([1,4,6,8,9,11],1))
+# print(Binary([],8))
+
+
