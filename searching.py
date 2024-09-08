@@ -39,5 +39,36 @@ def selectionSort(arr):
 # print(selectionSort([2,6,3,7,1,9]))
 
 
+def mergeSort(arr):
+    if len(arr)<=1:
+        return arr
+    mid=len(arr)//2
+    left=arr[:mid]
+    right=arr[mid:]
+    left_sorted=mergeSort(left)
+    right_sorted=mergeSort(right)
+    return merge(left_sorted,right_sorted)
+
+def merge(left,right):
+    sorted=[]
+    i=j=0
+    while i<len(left) and j<len(right):
+        if left[i]<right[j]:
+            sorted.append(left[i])
+            i+=1
+        else:
+            sorted.append(right[j])
+            j+=1
+    while i<len(left):
+        sorted.append(left[i])
+        i+=1
+
+    while j < len(right):
+        sorted.append(right[j])
+        j += 1
+
+    return sorted
+
+print(mergeSort([2,8,1,5,9,6]))
 
 
