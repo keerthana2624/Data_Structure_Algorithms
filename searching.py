@@ -14,7 +14,7 @@ def Binary(arr,target):
     left=0
     right=len(arr)-1
     while left<=right:
-        mid=left+(right-left)//2
+        mid = left + (right - left) // 2 
         if arr[mid]==target:
             return mid
         if target>arr[mid]:
@@ -22,9 +22,9 @@ def Binary(arr,target):
         else:
             right=mid-1
     return -1
-# print(Binary([1,4,6,8,9,11],8))
-# print(Binary([1,4,6,8,9,11],1))
-# print(Binary([],8))
+print(Binary([1,4,6,8,9,11],8))
+print(Binary([1,4,6,8,9,11],1))
+print(Binary([],8))
 
 # selection sort
 
@@ -69,6 +69,6 @@ def merge(left,right):
 
     return sorted
 
-print(mergeSort([2,8,1,5,9,6]))
+# print(mergeSort([2,8,1,5,9,6]))
 
 

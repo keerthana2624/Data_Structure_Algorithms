@@ -87,4 +87,15 @@ def numstriangle(n):
         for j in range(i):
             print(j+i,end='')
         print()
-print(numstriangle(4))
+# print(numstriangle(4))
+
+def max_product_of_three(nums):
+    nums.sort()
+    max_product1=nums[-1]*nums[-2]*nums[-3]
+    max_product2=nums[0]*nums[1]*nums[-1]
+    if max_product1>max_product2:
+        return max_product1
+    else:
+        return max_product2
+# n=[2,4,1,5,6]
+# print(max_product_of_three(n))
