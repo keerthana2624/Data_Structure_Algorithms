@@ -99,3 +99,13 @@ def max_product_of_three(nums):
         return max_product2
 # n=[2,4,1,5,6]
 # print(max_product_of_three(n))
+
+
+
+def subset_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return True
+    return False
+print(subset_sum([3,1,1,4,8,5],5))
