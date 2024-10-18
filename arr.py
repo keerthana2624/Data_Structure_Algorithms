@@ -87,4 +87,40 @@ def numstriangle(n):
         for j in range(i):
             print(j+i,end='')
         print()
-print(numstriangle(4))
+# print(numstriangle(4))
+
+
+def is_prime(n):
+    for i in range(2,n):
+        if n % i == 0:
+            return False
+    return True
+def primefactors(n):
+    x = 1
+    for i in range(2, n + 1):
+        if is_prime(i):
+            x *= i
+    return x
+n=5
+print(primefactors(n))
+
+def max_product_of_three(nums):
+    nums.sort()
+    max_product1=nums[-1]*nums[-2]*nums[-3]
+    max_product2=nums[0]*nums[1]*nums[-1]
+    if max_product1>max_product2:
+        return max_product1
+    else:
+        return max_product2
+# n=[2,4,1,5,6]
+# print(max_product_of_three(n))
+
+
+
+def subset_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return True
+    return False
+# print(subset_sum([3,1,1,4,8,5],5))
