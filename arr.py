@@ -124,3 +124,18 @@ def subset_sum(nums, target):
                 return True
     return False
 # print(subset_sum([3,1,1,4,8,5],5))
+
+
+
+
+# Remove Element
+def removeElement(nums, val):
+    elements=0
+    for i in range(len(nums)):
+        if nums[i]!=val:
+            nums[elements]=nums[i]
+            elements+=1
+    return elements
+nums=[0,1,2,2,3,0,4,2]
+val=2
+# print(removeElement(nums,val))
