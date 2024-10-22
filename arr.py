@@ -139,3 +139,18 @@ def removeElement(nums, val):
 nums=[0,1,2,2,3,0,4,2]
 val=2
 # print(removeElement(nums,val))
+
+
+# Remove Duplicates from Sorted Array
+def removeduplicates(nums):
+    count=0
+    for i in range(1,len(nums)):
+        if nums[i]!=nums[count]:
+            count+=1
+            nums[count]=nums[i]
+    return count+1
+nums=[0,0,1,1,1,2,2,3,3]
+print(removeduplicates(nums))
+
+
+
