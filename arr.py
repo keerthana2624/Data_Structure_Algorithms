@@ -166,7 +166,21 @@ def majorityelement(nums):
             return j
     return -1
 nums=[3,2,3,2,2]
-print(majorityelement(nums))
+# print(majorityelement(nums))
 
+
+
+#  Buy and Sell Stock
+def maxprofit(prices):
+    min_prices=prices[0]
+    max_profit=0
+    for i in prices:
+        if i < min_prices:
+            min_prices=i
+        elif i-min_prices>max_profit:
+            max_profit=i-min_prices
+    return max_profit
+prices=[7, 1, 5, 3, 6, 4]
+print(maxprofit(prices))
 
 
