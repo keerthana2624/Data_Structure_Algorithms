@@ -124,3 +124,63 @@ def subset_sum(nums, target):
                 return True
     return False
 # print(subset_sum([3,1,1,4,8,5],5))
+
+
+
+
+# Remove Element
+def removeElement(nums, val):
+    elements=0
+    for i in range(len(nums)):
+        if nums[i]!=val:
+            nums[elements]=nums[i]
+            elements+=1
+    return elements
+nums=[0,1,2,2,3,0,4,2]
+val=2
+# print(removeElement(nums,val))
+
+
+# Remove Duplicates from Sorted Array
+def removeduplicates(nums):
+    count=0
+    for i in range(1,len(nums)):
+        if nums[i]!=nums[count]:
+            count+=1
+            nums[count]=nums[i]
+    return count+1
+nums=[0,0,1,1,1,2,2,3,3]
+# print(removeduplicates(nums))
+
+
+# Majority Element
+def majorityelement(nums):
+    d={}
+    for i in nums:
+        if i in d:
+            d[i]+=1
+        else:
+            d[i]=1
+    for j in d:
+        if d[j]>len(nums)/2:
+            return j
+    return -1
+nums=[3,2,3,2,2]
+# print(majorityelement(nums))
+
+
+
+#  Buy and Sell Stock
+def maxprofit(prices):
+    min_prices=prices[0]
+    max_profit=0
+    for i in prices:
+        if i < min_prices:
+            min_prices=i
+        elif i-min_prices>max_profit:
+            max_profit=i-min_prices
+    return max_profit
+prices=[7, 1, 5, 3, 6, 4]
+print(maxprofit(prices))
+
+
