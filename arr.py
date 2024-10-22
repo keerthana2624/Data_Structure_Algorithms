@@ -195,4 +195,4 @@ def lengthOfLastWord(s):
             length+=1
      return length
 s= "  hello keerthi  "
-print(lengthOfLastWord(s))
+# print(lengthOfLastWord(s))
