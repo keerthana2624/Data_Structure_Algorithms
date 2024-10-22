@@ -181,6 +181,18 @@ def maxprofit(prices):
             max_profit=i-min_prices
     return max_profit
 prices=[7, 1, 5, 3, 6, 4]
-print(maxprofit(prices))
+# print(maxprofit(prices))
 
 
+# Length of Last Word
+def lengthOfLastWord(s):
+     length=0
+     x=s.strip()
+     for i in range(len(x)):
+        if x[i]==" ":
+            length=0
+        else:
+            length+=1
+     return length
+s= "  hello keerthi  "
+print(lengthOfLastWord(s))
