@@ -196,3 +196,13 @@ def lengthOfLastWord(s):
      return length
 s= "  hello keerthi  "
 # print(lengthOfLastWord(s))
+
+# sum of two nums equal to target
+def sumoftwo(nums,target):
+    for i in range(len(nums)):
+        for j in range(i+1,len(nums)):
+            if nums[i]+nums[j]==target:
+                return i,j
+nums=[2,5,1,7,3]
+target=8
+print(sumoftwo(nums,target))
