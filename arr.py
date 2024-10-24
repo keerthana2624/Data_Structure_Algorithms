@@ -217,5 +217,13 @@ def isPalindrome(s):
             if string[i]!=string[len(string)-1-i]:
                 return False
         return True
-s=" A man, a plan, a canal: Panama"
-print(isPalindrome(s))
+# s=" A man, a plan, a canal: Panama"
+# print(isPalindrome(s))
+
+
+def rotate(nums, k):
+     r=nums[-k:]+nums[:-k]
+     for i in range(len(nums)):
+          nums[i]=r[i]
+     return r
+print(rotate([1,2,3,4,5,6],3))
