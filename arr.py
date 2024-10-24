@@ -205,4 +205,17 @@ def sumoftwo(nums,target):
                 return i,j
 nums=[2,5,1,7,3]
 target=8
-print(sumoftwo(nums,target))
+# print(sumoftwo(nums,target))
+
+
+def isPalindrome(s):
+        string=""
+        for c in s:
+            if c.isalnum():
+                string+=c.lower()
+        for i in range(len(string)):
+            if string[i]!=string[len(string)-1-i]:
+                return False
+        return True
+s=" A man, a plan, a canal: Panama"
+print(isPalindrome(s))
