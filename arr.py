@@ -226,4 +226,4 @@ def rotate(nums, k):
      for i in range(len(nums)):
           nums[i]=r[i]
      return r
-print(rotate([1,2,3,4,5,6],3))
+# print(rotate([1,2,3,4,5,6],3))
