@@ -85,4 +85,4 @@ def searchInsert(nums, target):
      return left
 nums=[2,3,5,7]
 target=6
-print(searchInsert(nums,target))
+# print(searchInsert(nums,target))

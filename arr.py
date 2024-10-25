@@ -227,3 +227,12 @@ def rotate(nums, k):
           nums[i]=r[i]
      return r
 # print(rotate([1,2,3,4,5,6],3))
+
+
+# Palindrome Number
+def isPalindrome(x):
+    if (str(x))==(str(x)[::-1]):
+        return True
+    return False
+x="121"
+# print(isPalindrome(x))
