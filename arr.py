@@ -236,3 +236,16 @@ def isPalindrome(x):
     return False
 x="121"
 # print(isPalindrome(x))
+
+# Find the Index of the First Occurrence in a String
+def strStr(haystack, needle):
+    h_len=len(haystack)
+    n_len=len(needle)
+    for i in range(h_len-n_len+1):
+        if haystack[i:i+n_len]==needle:
+            return i
+    return -1
+haystack="leetcode"
+needle="leeto"
+print(strStr(haystack, needle))
+print(strStr("sadbutsad", "sad"))
