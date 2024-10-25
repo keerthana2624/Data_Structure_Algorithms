@@ -196,3 +196,43 @@ def lengthOfLastWord(s):
      return length
 s= "  hello keerthi  "
 # print(lengthOfLastWord(s))
+
+# sum of two nums equal to target
+def sumoftwo(nums,target):
+    for i in range(len(nums)):
+        for j in range(i+1,len(nums)):
+            if nums[i]+nums[j]==target:
+                return i,j
+nums=[2,5,1,7,3]
+target=8
+# print(sumoftwo(nums,target))
+
+
+def isPalindrome(s):
+        string=""
+        for c in s:
+            if c.isalnum():
+                string+=c.lower()
+        for i in range(len(string)):
+            if string[i]!=string[len(string)-1-i]:
+                return False
+        return True
+# s=" A man, a plan, a canal: Panama"
+# print(isPalindrome(s))
+
+
+def rotate(nums, k):
+     r=nums[-k:]+nums[:-k]
+     for i in range(len(nums)):
+          nums[i]=r[i]
+     return r
+# print(rotate([1,2,3,4,5,6],3))
+
+
+# Palindrome Number
+def isPalindrome(x):
+    if (str(x))==(str(x)[::-1]):
+        return True
+    return False
+x="121"
+# print(isPalindrome(x))
