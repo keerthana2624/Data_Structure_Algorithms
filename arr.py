@@ -247,5 +247,16 @@ def strStr(haystack, needle):
     return -1
 haystack="leetcode"
 needle="leeto"
-print(strStr(haystack, needle))
-print(strStr("sadbutsad", "sad"))
+# print(strStr(haystack, needle))
+# print(strStr("sadbutsad", "sad"))
+
+def longestCommonPrefix(strs):
+    strs.sort()
+    first=strs[0]
+    last=strs[-1]
+    for i in range(min(len(first),len(last))):
+        if first[i]!=last[i]:
+            return first[:i]
+    return first[:min(len(first),len(last))]
+strs=["kee","keema","keera"]
+print(longestCommonPrefix(strs))
