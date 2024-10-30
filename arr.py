@@ -258,5 +258,16 @@ def longestCommonPrefix(strs):
         if first[i]!=last[i]:
             return first[:i]
     return first[:min(len(first),len(last))]
-strs=["kee","keema","keera"]
-print(longestCommonPrefix(strs))
+# strs=["kee","keema","keera"]
+# print(longestCommonPrefix(strs))
+
+
+
+def removeDuplicates(nums):
+    c=0
+    for i in range(len(nums)):
+        if c<2 or nums[i]!=nums[c-2]:
+            nums[c]=nums[i]
+            c+=1
+    return c
+print(removeDuplicates([1,1,1,2,3,3,3]))
