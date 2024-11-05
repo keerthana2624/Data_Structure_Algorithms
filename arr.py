@@ -269,5 +269,5 @@ def removeDuplicates(nums):
         if c<2 or nums[i]!=nums[c-2]:
             nums[c]=nums[i]
             c+=1
-    return c
-print(removeDuplicates([1,1,1,2,3,3,3]))
+#     return c
+# print(removeDuplicates([1,1,1,2,3,3,3]))
