@@ -236,3 +236,38 @@ def isPalindrome(x):
     return False
 x="121"
 # print(isPalindrome(x))
+
+# Find the Index of the First Occurrence in a String
+def strStr(haystack, needle):
+    h_len=len(haystack)
+    n_len=len(needle)
+    for i in range(h_len-n_len+1):
+        if haystack[i:i+n_len]==needle:
+            return i
+    return -1
+haystack="leetcode"
+needle="leeto"
+# print(strStr(haystack, needle))
+# print(strStr("sadbutsad", "sad"))
+
+def longestCommonPrefix(strs):
+    strs.sort()
+    first=strs[0]
+    last=strs[-1]
+    for i in range(min(len(first),len(last))):
+        if first[i]!=last[i]:
+            return first[:i]
+    return first[:min(len(first),len(last))]
+# strs=["kee","keema","keera"]
+# print(longestCommonPrefix(strs))
+
+
+
+def removeDuplicates(nums):
+    c=0
+    for i in range(len(nums)):
+        if c<2 or nums[i]!=nums[c-2]:
+            nums[c]=nums[i]
+            c+=1
+#     return c
+# print(removeDuplicates([1,1,1,2,3,3,3]))
