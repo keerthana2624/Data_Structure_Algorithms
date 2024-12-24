@@ -26,5 +26,13 @@ def check_sorted(arr):
             return False
         else:
             return True
-print(check_sorted([4,7,9]))
-print(check_sorted([45,3,9]))
+# print(check_sorted([4,7,9]))
+# print(check_sorted([45,3,9]))
+
+#  Remove Duplicates from Sorted Array
+def removeDuplicates(arr):
+    new_arr=sorted(set(arr))
+    for i in range(len(new_arr)):
+        arr[i]=new_arr[i]
+    return (len(new_arr))
+# print(removeDuplicates([1,2,2,4,5,5]))
