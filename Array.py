@@ -80,3 +80,14 @@ def countEle(arr):
     return count
 # print(countEle([3,2,2,5,5,5]))
 # print(countEle([1,2,3,4,5]))
+
+
+# 7. Remove duplicates from an array. 
+
+def removeDuplicates(arr):
+    array=sorted(set(arr))
+    for i in range(len(array)-1):
+        arr[i]=array[i]
+    return array
+print(removeDuplicates([1,2,2,5,3,1]))
+        
