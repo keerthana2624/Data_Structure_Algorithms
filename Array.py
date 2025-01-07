@@ -73,4 +73,8 @@ def reverse(array):
 # print(reverse([1,2,3,4,5]))
 
 
-
+# 3. Find the second largest element in an array
+def sec_large(array):
+    array.sort()
+    return array[-2]
+# print(sec_large([2,4,1,7,5]))
