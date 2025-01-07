@@ -89,5 +89,21 @@ def removeDuplicates(arr):
     for i in range(len(array)-1):
         arr[i]=array[i]
     return array
-print(removeDuplicates([1,2,2,5,3,1]))
+# print(removeDuplicates([1,2,2,5,3,1]))
         
+
+# 8. Find the index of a given element in an array.
+
+def indexOfEle(arr,n):
+    for i in range(len(arr)):
+        if arr[i]==n:
+            return i
+# print(indexOfEle([1,2,2,4,5,4],4))
+
+def indexOfEle(arr,n):
+    index=[]
+    for i in range(len(arr)):
+        if arr[i]==n:
+            index.append(i)
+    return index
+# print(indexOfEle([1,2,2,4,5,4],4))
