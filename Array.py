@@ -36,3 +36,25 @@ def removeDuplicates(arr):
         arr[i]=new_arr[i]
     return (len(new_arr))
 # print(removeDuplicates([1,2,2,4,5,5]))
+
+
+
+
+# 1. Find the largest and smallest elements in an array.  
+def LargSmall(arr):
+    larg=arr[0]
+    small=arr[0]
+    for i in arr:
+        if i>larg:
+            larg=i
+        if i<small:
+            small=i
+    return larg,small
+# print(LargSmall([2,6,3,7]))
+# print(LargSmall([0,0,1,0,0]))
+
+
+
+
+
+
