@@ -107,3 +107,16 @@ def indexOfEle(arr,n):
             index.append(i)
     return index
 # print(indexOfEle([1,2,2,4,5,4],4))
+
+
+# 10. Find the difference between the maximum and minimum elements in an array.
+def diffOfMax_Min(arr):
+    max=arr[0]
+    min=arr[0]
+    for i in range(len(arr)):
+        if arr[i]>max:
+            max=arr[i]
+        if arr[i]<min:
+            min=arr[i]
+    return max-min
+print(diffOfMax_Min([2,5,1,8]))
