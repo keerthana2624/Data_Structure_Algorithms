@@ -61,11 +61,22 @@ def check_sorted(arr):
 
 
 # 5. Find the sum of all elements in an array.  
-
 def SumOfElements(arr):
     sum=0
     for i in arr:
         sum+=i
     return sum
-print(SumOfElements([2,4,2,5,1,1]))
+# print(SumOfElements([2,4,2,5,1,1]))
         
+# 6. Count the frequency of each element in an array.  
+
+def countEle(arr):
+    count={}
+    for i in arr:
+        if i in count:
+            count[i]+=1
+        else: 
+            count[i]=1
+    return count
+# print(countEle([3,2,2,5,5,5]))
+# print(countEle([1,2,3,4,5]))
