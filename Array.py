@@ -54,7 +54,23 @@ def LargSmall(arr):
 # print(LargSmall([0,0,1,0,0]))
 
 
+# 2. Reverse an array.  
 
+# inplce
+def reverse(arr):  
+    arr.reverse()
+    return arr
+# print(reverse([1,3,6,2,4]))
+# print(reverse([2,4,5,6,7]))
+
+def reverse(array):
+    arr=[]
+    for i in range(len(array)-1,-1,-1):
+        arr.append(array[i])
+    return arr
+# print(reverse([3,1,6,4,7]))
+# print(reverse([]))
+# print(reverse([1,2,3,4,5]))
 
 
 
