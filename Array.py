@@ -186,5 +186,9 @@ def duplicate(array):
         if c>1 and array[i] not in dupli:
             dupli.append(array[i])
     return dupli
-print(duplicate([1,4,2,1,4,1]))
+# print(duplicate([1,4,2,1,4,1]))
             
+# 16. Find the first non-repeating element in an array.  
+def nonRepeating(array):
+  
+print(nonRepeating([1,3,1,4,1]))
