@@ -1,16 +1,4 @@
 
-
-#  Remove Duplicates from Sorted Array
-def removeDuplicates(arr):
-    new_arr=sorted(set(arr))
-    for i in range(len(new_arr)):
-        arr[i]=new_arr[i]
-    return (len(new_arr))
-# print(removeDuplicates([1,2,2,4,5,5]))
-
-
-
-
 # 1. Find the largest and smallest elements in an array.  
 def LargSmall(arr):
     larg=arr[0]
@@ -108,6 +96,18 @@ def indexOfEle(arr,n):
     return index
 # print(indexOfEle([1,2,2,4,5,4],4))
 
+# 9. Merge two arrays and sort the resulting array. 
+
+def merge_sort(arr1,arr2):
+    merged=arr1+arr2
+    for i in range(len(merged)):
+        for j in range(len(merged)-i-1):
+            if merged[j]>merged[j+1]:
+                merged[j],merged[j+1]=merged[j+1],merged[j]
+    return merged
+# print(merge_sort([2,4,6,8],[1,3,5,7]))
+
+
 
 # 10. Find the difference between the maximum and minimum elements in an array.
 def diffOfMax_Min(arr):
@@ -119,4 +119,17 @@ def diffOfMax_Min(arr):
         if arr[i]<min:
             min=arr[i]
     return max-min
-print(diffOfMax_Min([2,5,1,8]))
+# print(diffOfMax_Min([2,5,1,8]))
+
+# 11. Count the number of even and odd numbers in an array.  
+def evenOdd(array):
+    countOfeven=0
+    countOfodd=0
+    for i in range(len(array)):
+        if array[i]%2==0:
+            countOfeven+=1
+        else:
+            countOfodd+=1
+    return countOfeven,countOfodd
+print(evenOdd([2,3,6,5,8,1,7]))
+
