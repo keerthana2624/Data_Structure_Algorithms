@@ -174,3 +174,17 @@ def uniqueEle(array):
 # print(uniqueEle([1,4,3,1,4,]))
 
 
+# 15. Find the duplicate elements in an array. 
+
+def duplicate(array):
+    dupli=[]
+    for i in range(len(array)):
+        c=0
+        for j in range(len(array)):
+            if array[i]==array[j]:
+                c+=1
+        if c>1 and array[i] not in dupli:
+            dupli.append(array[i])
+    return dupli
+print(duplicate([1,4,2,1,4,1]))
+            
