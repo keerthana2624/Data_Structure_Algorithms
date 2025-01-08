@@ -121,6 +121,8 @@ def diffOfMax_Min(arr):
     return max-min
 # print(diffOfMax_Min([2,5,1,8]))
 
+
+
 # 11. Count the number of even and odd numbers in an array.  
 def evenOdd(array):
     countOfeven=0
@@ -131,5 +133,44 @@ def evenOdd(array):
         else:
             countOfodd+=1
     return countOfeven,countOfodd
-print(evenOdd([2,3,6,5,8,1,7]))
+# print(evenOdd([2,3,6,5,8,1,7]))
+
+
+# 12. Check if two arrays are equal (contain the same elements in any order). 
+def equalArray(arr1,arr2):
+    if len(arr1)==len(arr2):
+        return True
+    else:
+        return False
+# print(equalArray([1,4,6,3],[7,2,8]))
+
+
+# 13.Find the common elements in two sorted arrays. 
+def commonelement(arr1,arr2):
+    common=[]
+    for i in range(len(arr1)):
+        for j in range(len(arr2)):
+            if arr1[i]==arr2[j]:
+                common.append(arr1[i])
+    return common
+# print(commonelement([1,3,4,6],[2,3,6,7]))
+# print(commonelement([2,4,1,6],[3,5,7,9]))
+
+
+
+# 14. Find all unique elements in an array. 
+
+def uniqueEle(array):
+    unique=[]
+    for i in range(len(array)):
+        count=0
+        for j in range(len(array)):
+            if array[i]==array[j]:
+                count+=1
+        if count==1:
+            unique.append(array[i])
+    return unique
+# print(uniqueEle([1,4,3,1,4,7]))
+# print(uniqueEle([1,4,3,1,4,]))
+
 
