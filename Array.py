@@ -198,4 +198,14 @@ def missingNum(array,n):
 
 
 # 17. Find the cumulative sum of elements in an array (prefix sum array).
+def cumulative(array):
+    cumulative_sum=[]
+    current_sum=0
+    for i in array:
+        current_sum+=i
+        cumulative_sum.append(current_sum)
+    return cumulative_sum
+# print(cumulative([1,2,3,4,5]))
 
+
+# 18. Find the first non-repeating element in an array. 
