@@ -188,7 +188,14 @@ def duplicate(array):
     return dupli
 # print(duplicate([1,4,2,1,4,1]))
             
-# 16. Find the first non-repeating element in an array.  
-def nonRepeating(array):
-  
-print(nonRepeating([1,3,1,4,1]))
+# 16. Find the missing number in an array containing numbers from 1 to N. 
+
+def missingNum(array,n):
+    total_sum=n*(n+1)//2
+    sumOfNums=sum(array)
+    return sumOfNums-total_sum
+# print(missingNum([1,3,6,2,7],5))
+
+
+# 17. Find the cumulative sum of elements in an array (prefix sum array).
+
