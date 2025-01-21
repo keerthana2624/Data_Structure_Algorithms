@@ -207,10 +207,73 @@ def cumulative(array):
 
 
 
-
+# Two Sum (Easy)
 def Twosum(arr,target):
     for i in range(len(arr)):
         for j in range(i+1,len(arr)):
             if arr[i]+arr[j]==target:
                 return i,j
 # print(Twosum([2,5,2,3,3],6))
+
+# Remove Duplicates from Sorted Array (Easy)
+def removeDuplicates(arr):
+    array=sorted(set(arr))
+    for i in range(len(array)-1):
+        arr[i]=array[i]
+    return array
+# print(removeDuplicates([1,2,2,5,3,1]))
+
+
+# max_subarray
+def max_subarray(array):
+    max_sum=array[0]
+    current_sum=array[0]
+    for i in range(1,len(array)):
+        current_sum=max(array[i],current_sum+array[i])
+        max_sum=max(max_sum,current_sum)
+    return max_sum
+# print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+
+
+# merge_sort
+
+def merge_sort(arr1,arr2):
+    merged=arr1+arr2
+    for i in range(len(merged)):
+        for j in range(len(merged)-i-1):
+            if merged[j]>merged[j+1]:
+                merged[j],merged[j+1]=merged[j+1],merged[j]
+    return merged
+# print(merge_sort([1,2,3,0,0,0],[2,5,6]))
+
+
+def merge(a1,a2):
+    i=0
+    j=0
+    merge=[]
+    while i<len(a1) and j<len(a2):
+        if a1[i]<a2[j]:
+            merge.append(a1[i])
+            i+=1
+        else:
+            merge.append(a2[j])
+            j+=1
+    while i<len(a1):
+        merge.append(a1[i])
+        i+=1
+    while j<len(a2):
+        merge.append(a2[j])
+        j+=1
+    return merge
+# print(merge([1, 2, 3], [2, 5, 6]))
+
+
+def anagram(string1,string2):
+    s1=sorted(string1)
+    s2=sorted(string2)
+    if s1==s2:
+        return True
+    else:
+        return False
+# print(anagram("listen","silent"))
+
