@@ -189,13 +189,11 @@ def duplicate(array):
 # print(duplicate([1,4,2,1,4,1]))
             
 # 16. Find the missing number in an array containing numbers from 1 to N. 
-
 def missingNum(array,n):
     total_sum=n*(n+1)//2
     sumOfNums=sum(array)
     return sumOfNums-total_sum
 # print(missingNum([1,3,6,2,7],5))
-
 
 # 17. Find the cumulative sum of elements in an array (prefix sum array).
 def cumulative(array):
@@ -208,4 +206,11 @@ def cumulative(array):
 # print(cumulative([1,2,3,4,5]))
 
 
-# 18. Find the first non-repeating element in an array. 
+
+
+def Twosum(arr,target):
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            if arr[i]+arr[j]==target:
+                return i,j
+# print(Twosum([2,5,2,3,3],6))
