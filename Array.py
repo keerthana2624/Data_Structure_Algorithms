@@ -277,3 +277,18 @@ def anagram(string1,string2):
         return False
 # print(anagram("listen","silent"))
 
+
+
+def is_prime(n):
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    return True
+def prime_factor(n):
+    factor=1
+    for i in range(2,n+1):
+        if is_prime(i):
+            factor*=i
+    return factor
+n=5
+print(prime_factor(n))
