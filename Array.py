@@ -203,7 +203,7 @@ def cumulative(array):
         current_sum+=i
         cumulative_sum.append(current_sum)
     return cumulative_sum
-# print(cumulative([1,2,3,4,5]))
+print(cumulative([1,2,3,4,5]))
 
 
 
@@ -291,4 +291,35 @@ def prime_factor(n):
             factor*=i
     return factor
 n=5
-print(prime_factor(n))
+# print(prime_factor(5))
+
+
+def fibonacci(n):
+    a=0
+    b=1
+    if n<0:
+        print("incorrect input")
+    elif n==0:
+        return 0
+    elif n==1:
+        return b
+    else:
+        for i in range(1,n):
+            c=a+b
+            a=b
+            b=c
+        return b
+# print(fibonacci(9))
+
+
+def Fibonacci(n):
+    if n < 0:
+        print("Incorrect input")
+    elif n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+print(Fibonacci(9))
