@@ -82,9 +82,5 @@ def sortedArray(a,b):
 # print(sortedArray([1,2,4],[2,3,5]))
 
 
-def numstriangle(n):
-    for i in range(n):
-        for j in range(i):
-            print(j+i,end='')
-        print()
-print(numstriangle(4))
+def moveZero(arr):
+    

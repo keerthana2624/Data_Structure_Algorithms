@@ -203,7 +203,7 @@ def cumulative(array):
         current_sum+=i
         cumulative_sum.append(current_sum)
     return cumulative_sum
-print(cumulative([1,2,3,4,5]))
+# print(cumulative([1,2,3,4,5]))
 
 
 
@@ -322,4 +322,21 @@ def Fibonacci(n):
 
     else:
         return Fibonacci(n-1) + Fibonacci(n-2)
-print(Fibonacci(9))
+# print(Fibonacci(9))
+
+
+
+
+# Majority Element
+
+def majority(nums):
+    n=len(nums)
+    count={}
+    for i in nums:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+        if count[i] > n//2:
+            return i
+# print(majority([3,2,3]))
