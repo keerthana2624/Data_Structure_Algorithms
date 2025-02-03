@@ -340,3 +340,29 @@ def majority(nums):
         if count[i] > n//2:
             return i
 # print(majority([3,2,3]))
+
+# remove element
+
+def removeele(nums,val):
+    x1=[]
+    x2=[]
+    c=0
+    for i in range(len(nums)):
+        if nums[i]==val:
+            x1.append(nums[i])
+        else:
+            x2.append(nums[i])
+            c+=1
+    return c
+# print(removeele([3,2,2,3,3],2))
+
+
+# Inplace removing element and returning count 
+def removeele(nums,val):
+    index=0
+    for i in range(len(nums)):
+        if nums[i]!=val:
+            nums[index]=nums[i]
+            index+=1
+    return index
+print(removeele([0,1,2,2,3,0,4,2],2))
