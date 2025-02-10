@@ -365,4 +365,17 @@ def removeele(nums,val):
             nums[index]=nums[i]
             index+=1
     return index
-print(removeele([0,1,2,2,3,0,4,2],2))
+# print(removeele([0,1,2,2,3,0,4,2],2))
+
+
+# removeDuplicates from sorted arr in place
+def removeDupli(nums):
+    i=0
+    for j in range(1,len(nums)):
+        if nums[j]!=nums[i]:
+            i+=1
+            nums[i]=nums[j]
+    return nums[:i+1]
+# print(removeDupli([1,2,2,4,4]))
+
+
