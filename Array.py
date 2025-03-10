@@ -379,3 +379,73 @@ def removeDupli(nums):
 # print(removeDupli([1,2,2,4,4]))
 
 
+
+# 10/3/25
+
+#1. Find the largest and smallest element in an array.
+def LargSmall(arr):
+    larg=arr[0]
+    small=arr[0]
+    for i in arr:
+        if i>larg:
+            larg=i
+        if i<small:
+            small=i
+    return larg,small
+# print(LargSmall([2,6,3,7]))
+# print(LargSmall([0,0,1,0,0]))
+
+#2. Reverse an array in place.
+
+def reverse_array(arr):
+    start = 0
+    end = len(arr)-1
+    while start<end:
+        arr[start],arr[end] = arr[end],arr[start]
+        start+=1
+        end-=1
+    return arr
+# print(reverse_array([1,2,3,5,6]))
+
+# 3.Find the second largest element in an array.
+
+# def sec_largest(arr):
+#     largest=None
+#     second_largest=None
+#     for i in arr:
+#          if largest is None or i > largest:
+#             second_largest=largest
+#             largest=i
+#     return second_largest
+
+
+
+# 4.Check if an array is sorted.
+
+def check_sorted(arr):
+    for i in range(len(arr)-1):
+        if arr[i]>arr[i+1]:
+            return False
+    return True
+# print(check_sorted([1,2,3,4]))
+# print(check_sorted([1,2,6,9,4]))
+
+
+
+# 5.Remove duplicates from a sorted array.
+
+def remove_dupli(arr):
+    j=0
+    for i in range(1,len(arr)):
+        if arr[i]!=arr[j]:
+            j+=1
+            arr[j]=arr[i]
+    return arr[:j+1]
+# print(remove_dupli([1,2,2,3,4,4]))
+
+
+
+
+    
+
+
