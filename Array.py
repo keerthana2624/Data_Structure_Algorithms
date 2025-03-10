@@ -188,7 +188,267 @@ def duplicate(array):
     return dupli
 # print(duplicate([1,4,2,1,4,1]))
             
-# 16. Find the first non-repeating element in an array.  
-def nonRepeating(array):
-  
-print(nonRepeating([1,3,1,4,1]))
+# 16. Find the missing number in an array containing numbers from 1 to N. 
+def missingNum(array,n):
+    total_sum=n*(n+1)//2
+    sumOfNums=sum(array)
+    return sumOfNums-total_sum
+# print(missingNum([1,3,6,2,7],5))
+
+# 17. Find the cumulative sum of elements in an array (prefix sum array).
+def cumulative(array):
+    cumulative_sum=[]
+    current_sum=0
+    for i in array:
+        current_sum+=i
+        cumulative_sum.append(current_sum)
+    return cumulative_sum
+# print(cumulative([1,2,3,4,5]))
+
+
+
+# Two Sum (Easy)
+def Twosum(arr,target):
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            if arr[i]+arr[j]==target:
+                return i,j
+# print(Twosum([2,5,2,3,3],6))
+
+# Remove Duplicates from Sorted Array (Easy)
+def removeDuplicates(arr):
+    array=sorted(set(arr))
+    for i in range(len(array)-1):
+        arr[i]=array[i]
+    return array
+# print(removeDuplicates([1,2,2,5,3,1]))
+
+
+# max_subarray
+def max_subarray(array):
+    max_sum=array[0]
+    current_sum=array[0]
+    for i in range(1,len(array)):
+        current_sum=max(array[i],current_sum+array[i])
+        max_sum=max(max_sum,current_sum)
+    return max_sum
+# print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+
+
+# merge_sort
+
+def merge_sort(arr1,arr2):
+    merged=arr1+arr2
+    for i in range(len(merged)):
+        for j in range(len(merged)-i-1):
+            if merged[j]>merged[j+1]:
+                merged[j],merged[j+1]=merged[j+1],merged[j]
+    return merged
+# print(merge_sort([1,2,3,0,0,0],[2,5,6]))
+
+
+def merge(a1,a2):
+    i=0
+    j=0
+    merge=[]
+    while i<len(a1) and j<len(a2):
+        if a1[i]<a2[j]:
+            merge.append(a1[i])
+            i+=1
+        else:
+            merge.append(a2[j])
+            j+=1
+    while i<len(a1):
+        merge.append(a1[i])
+        i+=1
+    while j<len(a2):
+        merge.append(a2[j])
+        j+=1
+    return merge
+# print(merge([1, 2, 3], [2, 5, 6]))
+
+
+def anagram(string1,string2):
+    s1=sorted(string1)
+    s2=sorted(string2)
+    if s1==s2:
+        return True
+    else:
+        return False
+# print(anagram("listen","silent"))
+
+
+
+def is_prime(n):
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    return True
+def prime_factor(n):
+    factor=1
+    for i in range(2,n+1):
+        if is_prime(i):
+            factor*=i
+    return factor
+n=5
+# print(prime_factor(5))
+
+
+def fibonacci(n):
+    a=0
+    b=1
+    if n<0:
+        print("incorrect input")
+    elif n==0:
+        return 0
+    elif n==1:
+        return b
+    else:
+        for i in range(1,n):
+            c=a+b
+            a=b
+            b=c
+        return b
+# print(fibonacci(9))
+
+
+def Fibonacci(n):
+    if n < 0:
+        print("Incorrect input")
+    elif n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+# print(Fibonacci(9))
+
+
+
+
+# Majority Element
+
+def majority(nums):
+    n=len(nums)
+    count={}
+    for i in nums:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+        if count[i] > n//2:
+            return i
+# print(majority([3,2,3]))
+
+# remove element
+
+def removeele(nums,val):
+    x1=[]
+    x2=[]
+    c=0
+    for i in range(len(nums)):
+        if nums[i]==val:
+            x1.append(nums[i])
+        else:
+            x2.append(nums[i])
+            c+=1
+    return c
+# print(removeele([3,2,2,3,3],2))
+
+
+# Inplace removing element and returning count 
+def removeele(nums,val):
+    index=0
+    for i in range(len(nums)):
+        if nums[i]!=val:
+            nums[index]=nums[i]
+            index+=1
+    return index
+# print(removeele([0,1,2,2,3,0,4,2],2))
+
+
+# removeDuplicates from sorted arr in place
+def removeDupli(nums):
+    i=0
+    for j in range(1,len(nums)):
+        if nums[j]!=nums[i]:
+            i+=1
+            nums[i]=nums[j]
+    return nums[:i+1]
+# print(removeDupli([1,2,2,4,4]))
+
+
+
+# 10/3/25
+
+#1. Find the largest and smallest element in an array.
+def LargSmall(arr):
+    larg=arr[0]
+    small=arr[0]
+    for i in arr:
+        if i>larg:
+            larg=i
+        if i<small:
+            small=i
+    return larg,small
+# print(LargSmall([2,6,3,7]))
+# print(LargSmall([0,0,1,0,0]))
+
+#2. Reverse an array in place.
+
+def reverse_array(arr):
+    start = 0
+    end = len(arr)-1
+    while start<end:
+        arr[start],arr[end] = arr[end],arr[start]
+        start+=1
+        end-=1
+    return arr
+# print(reverse_array([1,2,3,5,6]))
+
+# 3.Find the second largest element in an array.
+
+# def sec_largest(arr):
+#     largest=None
+#     second_largest=None
+#     for i in arr:
+#          if largest is None or i > largest:
+#             second_largest=largest
+#             largest=i
+#     return second_largest
+
+
+
+# 4.Check if an array is sorted.
+
+def check_sorted(arr):
+    for i in range(len(arr)-1):
+        if arr[i]>arr[i+1]:
+            return False
+    return True
+# print(check_sorted([1,2,3,4]))
+# print(check_sorted([1,2,6,9,4]))
+
+
+
+# 5.Remove duplicates from a sorted array.
+
+def remove_dupli(arr):
+    j=0
+    for i in range(1,len(arr)):
+        if arr[i]!=arr[j]:
+            j+=1
+            arr[j]=arr[i]
+    return arr[:j+1]
+# print(remove_dupli([1,2,2,3,4,4]))
+
+
+
+
+
+
+
+    
+
+
