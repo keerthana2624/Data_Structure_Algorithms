@@ -55,7 +55,7 @@ def remove_spaces(s):
             result.append(s[i])
     return ''.join(result)
 # print(remove_spaces('hello hii rakesh garu'))
-print(remove_spaces('hello hii rakesh garu'))
+
 
 
 
