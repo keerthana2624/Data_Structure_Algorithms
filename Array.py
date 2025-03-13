@@ -443,7 +443,60 @@ def remove_dupli(arr):
     return arr[:j+1]
 # print(remove_dupli([1,2,2,3,4,4]))
 
+# >>>>>>>>>>>>>>>>>>>
 
+# 13/3/25
+
+
+# 1.linear search
+
+def linear(arr,k):
+    for i in range(len(arr)):
+        if arr[i]==k:
+            return i
+    return -1
+# print(linear([1,4,7,3],9))
+        
+
+
+# 2.binary search
+
+def binary(arr,target):
+    left=0
+    right=len(arr)-1
+    while left<=right:
+        mid=left+(right-left)//2
+        if arr[mid]==target:
+            return mid
+        if arr[mid]<target:
+            left=mid+1
+        else:
+            right=mid-1
+    return -1
+# print(binary([1,2,6,8],6))
+
+
+# 3.smallest and largest elements
+def smallLarge(arr):
+    small=arr[0]
+    large=arr[0]
+    for i in range(len(arr)-1):
+        if arr[i]<small:
+            small=arr[i]
+        if arr[i]>large:
+            large=arr[i]
+    return small,large
+# print(smallLarge([2,5,8,5,4]))
+
+
+
+# 4.majority element from an array
+
+
+
+# 5.merge sorted arrays
+
+# def mergeOfsorted(a1,a2):
 
 
 
