@@ -126,7 +126,27 @@ def is_anagram(s1,s2):
         else:
             c2[i]=1
     return c1==c2
-print(is_anagram("listen", "silent"))
+# print(is_anagram("listen", "silent"))
+
+# 10.maximum occurence character in string
+
+def max_occurence(string):
+    count={}
+    max=0
+    most_occurence=None
+    for i in string:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+        if count[i]>max:
+            max=count[i]
+            most_occurence=i
+    return most_occurence
+# print(max_occurence("keerthi"))
+            
+
+
 
 
 
