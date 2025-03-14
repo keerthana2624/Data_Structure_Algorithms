@@ -57,5 +57,16 @@ def remove_spaces(s):
 # print(remove_spaces('hello hii rakesh garu'))
 
 
+# 5.count the occurence of a character in string
+
+def occurence_String(s,char):
+    count=0
+    for i in s:
+        if i==char:
+            count+=1
+    return count
+# print(occurence_String("keerthiRakesh","k"))
+
+
 
 
