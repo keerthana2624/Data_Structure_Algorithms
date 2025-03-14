@@ -126,7 +126,7 @@ def is_anagram(s1,s2):
         else:
             c2[i]=1
     return c1==c2
-# print(is_anagram("listen", "silent"))
+print(is_anagram("listen", "silent"))
 
 
 
