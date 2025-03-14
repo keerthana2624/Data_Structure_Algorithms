@@ -68,5 +68,23 @@ def occurence_String(s,char):
 # print(occurence_String("keerthiRakesh","k"))
 
 
+# 6.count no.of vowels,consonants,spaces in string
+
+def count_VCS(s):
+    V=0
+    C=0
+    S=0
+    vowels="A","E","I","O","U","a","e","i","o","u"
+    for i in s:
+        if i in vowels:
+            V+=1
+        elif i==' ':
+            S+=1
+        elif i.isalpha():
+            C+=1
+    return V,C,S
+# print(count_VCS("keerthi keerthana good girl"))
+
+
 
 
