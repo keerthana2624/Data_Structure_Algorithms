@@ -97,7 +97,16 @@ def remove_vowels(s):
     return new_string
 # print(remove_vowels("keerthi keerthana"))
 
+# 8.remove characters from string except alphabets
 
+
+def remove_char(s):
+    new_s=""
+    for i in s:
+        if i.isalpha():
+            new_s+=i
+    return new_s
+# print(remove_char("keerthi@kerthana!!"))
 
 
 
