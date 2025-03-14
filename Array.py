@@ -492,6 +492,53 @@ def smallLarge(arr):
 
 # 4.majority element from an array
 
+# def majority(arr):
+#     count_dict={}
+#     for i in arr:
+#         if i in count_dict:
+#             count_dict[i]+=1
+#         else:
+#             count_dict[i]=1
+
+#     # return count_dict
+#     max=0
+#     ans=0
+#     for k in count_dict:
+#         if count_dict[k] > max:
+#             max=count_dict[k]
+#             ans=k
+#     return ans
+
+
+def majority(arr):
+    count_dic={}
+    max=0
+    most_frq=None
+    for i in arr:
+        if i in count_dic:
+            count_dic[i]+=1
+            if count_dic[i]>max:
+                max=count_dic[i]
+                most_frq=i
+        else:
+            count_dic[i]=1
+            if count_dic[i]>max:
+                max=count_dic[i]
+                most_frq=i
+
+
+    return most_frq
+print(majority([1,4,4,6,6,6,7]))
+
+
+
+
+
+
+
+
+
+
 
 
 # 5.merge sorted arrays

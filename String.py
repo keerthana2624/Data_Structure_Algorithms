@@ -57,5 +57,56 @@ def remove_spaces(s):
 # print(remove_spaces('hello hii rakesh garu'))
 
 
+# 5.count the occurence of a character in string
+
+def occurence_String(s,char):
+    count=0
+    for i in s:
+        if i==char:
+            count+=1
+    return count
+# print(occurence_String("keerthiRakesh","k"))
+
+
+# 6.count no.of vowels,consonants,spaces in string
+
+def count_VCS(s):
+    V=0
+    C=0
+    S=0
+    vowels="A","E","I","O","U","a","e","i","o","u"
+    for i in s:
+        if i in vowels:
+            V+=1
+        elif i==' ':
+            S+=1
+        elif i.isalpha():
+            C+=1
+    return V,C,S
+# print(count_VCS("keerthi keerthana good girl"))
+
+
+# 7.Remove all vowels from the string
+
+def remove_vowels(s):
+    vowels="AEIOUaeiou"
+    new_string=""
+    for i in s:
+        if i not in vowels:
+            new_string+=i
+    return new_string
+# print(remove_vowels("keerthi keerthana"))
+
+# 8.remove characters from string except alphabets
+
+
+def remove_char(s):
+    new_s=""
+    for i in s:
+        if i.isalpha():
+            new_s+=i
+    return new_s
+# print(remove_char("keerthi@kerthana!!"))
+
 
 
