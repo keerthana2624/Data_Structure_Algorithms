@@ -86,5 +86,18 @@ def count_VCS(s):
 # print(count_VCS("keerthi keerthana good girl"))
 
 
+# 7.Remove all vowels from the string
+
+def remove_vowels(s):
+    vowels="AEIOUaeiou"
+    new_string=""
+    for i in s:
+        if i not in vowels:
+            new_string+=i
+    return new_string
+# print(remove_vowels("keerthi keerthana"))
+
+
+
 
 
