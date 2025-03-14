@@ -108,5 +108,25 @@ def remove_char(s):
     return new_s
 # print(remove_char("keerthi@kerthana!!"))
 
+# 9.Checking if Two Strings are Anagrams of each other
+
+def is_anagram(s1,s2):
+    if len(s1)!=len(s2):
+        return False
+    c1={}
+    c2={}
+    for i in s1:
+        if i in c1:
+            c1[i]+=1
+        else:
+            c1[i]=1
+    for i in s2:
+        if i in c2:
+            c2[i]+=1
+        else:
+            c2[i]=1
+    return c1==c2
+# print(is_anagram("listen", "silent"))
+
 
 
