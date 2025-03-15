@@ -565,7 +565,19 @@ def reverseArray(arr):
         start+=1
         end-=1
     return arr
-print(reverseArray([1,2,3,4,6]))
+# print(reverseArray([1,2,3,4,6]))
+
+# 7.count the frequency of each element in an array
+
+def count_frequency(arr):
+    count={}
+    for i in arr:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+    return count
+# print(count_frequency([1,2,1,6,2,2,7,3,2]))
 
 
 
