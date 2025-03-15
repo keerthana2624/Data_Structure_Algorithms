@@ -595,7 +595,15 @@ def find_missingNumber(arr):
 
 
 
+# 9.remove duplicates from sorted array
 
+def remove_dupli_sorted(arr):
+    new_array=[arr[0]]
+    for i in range(1,len(arr)):
+        if arr[i]!=arr[i-1]:
+            new_array.append(arr[i])
+    return new_array
+# print(remove_dupli_sorted([1,2,2,3,5]))
 
     
 
