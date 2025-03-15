@@ -580,6 +580,20 @@ def count_frequency(arr):
 # print(count_frequency([1,2,1,6,2,2,7,3,2]))
 
 
+# 8.finding the missing number in an array
+
+def find_missingNumber(arr):
+    n=len(arr)+1
+    total_sum=0
+    array_sum=0
+    for i in range(1,n+1):
+        total_sum+=i
+    for j in arr:
+        array_sum+=j
+    return total_sum-array_sum
+# print(find_missingNumber([1,3,4,5,6]))
+
+
 
 
 
