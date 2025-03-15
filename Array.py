@@ -555,6 +555,19 @@ def mergeOfsorted(a1,a2):
 # print(mergeOfsorted([1,4,5,7],[2,3,6,8]))
 
 
+# 6.reverse the given array 
+
+def reverseArray(arr):
+    start=0
+    end=len(arr)-1
+    while start<end:
+        arr[start],arr[end]=arr[end],arr[start]
+        start+=1
+        end-=1
+    return arr
+print(reverseArray([1,2,3,4,6]))
+
+
 
 
 
