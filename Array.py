@@ -528,22 +528,31 @@ def majority(arr):
 
 
     return most_frq
-print(majority([1,4,4,6,6,6,7]))
-
-
-
-
-
-
-
-
-
+# print(majority([1,4,4,6,6,6,7]))
 
 
 
 # 5.merge sorted arrays
-
-# def mergeOfsorted(a1,a2):
+def mergeOfsorted(a1,a2):
+    i=0
+    j=0
+    merge=[]
+    while i<len(a1) and j<len(a2):
+        if a1[i]<a2[j]:
+            merge.append(a1[i])
+            i+=1
+        else:
+            merge.append(a2[j])
+            j+=1
+    while i<len(a1):
+        merge.append(a1[i])
+        i+=1
+    while j<len(a2):
+        merge.append(a2[j])
+        j+=1
+    return merge
+# print(mergeOfsorted([1,2,3,4],[5,6,7,8]))
+# print(mergeOfsorted([1,4,5,7],[2,3,6,8]))
 
 
 
