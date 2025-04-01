@@ -605,6 +605,37 @@ def remove_dupli_sorted(arr):
     return new_array
 # print(remove_dupli_sorted([1,2,2,3,5]))
 
-    
+
+
+# 10.calculating the sum of elements in an array
+
+def sum_elements(arr):
+    total=0
+    for i in arr:
+        total+=i
+    return total
+# print(sum_elements([1,2,3,2,2]))
+
+
+# find the average of all elements in on array
+
+def average_array(arr):
+    total=0
+    count=0
+    for i in arr:
+        total+=i
+        count+=1
+    return total/count
+# print(average_array([1,2,3,4,5]))
+
+
+
+
+
+
+
+
+
+
 
 
