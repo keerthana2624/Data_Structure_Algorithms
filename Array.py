@@ -629,6 +629,19 @@ def average_array(arr):
 # print(average_array([1,2,3,4,5]))
 
 
+def left_rotate(arr,k):
+    n=len(arr)
+    k=k%n
+    for i in range(k):
+        last=arr[-1]
+        for j in range(n-1):
+            arr[j]=arr[j+1]
+        arr[n-1]=last
+arr=[1,2,3] 
+left_rotate(arr,2)
+# print(arr)       
+
+
 
 
 
