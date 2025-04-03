@@ -711,3 +711,29 @@ def selection_sort(arr):
 # print(selection_sort([1,4,2,5,3]))
 
 
+def merge_sort(arr):
+    if len(arr)<=1:
+        return arr
+    mid=len(arr)//2
+    left=merge_sort(arr[:mid])
+    right=merge_sort(arr[mid:])
+    return merge(left,right)
+def merge(left,right):
+    i=0
+    j=0
+    merged_arr=[]
+    while i<len(left) and j<len(right):
+        if left[i]<right[j]:
+            merged_arr.append(left[i])
+            i+=1
+        else:
+            merged_arr.append(right[j])
+            j+=1
+    while i<len(left):
+        merged_arr.append(left[i])
+        i+=1
+    while j<len(right):
+        merged_arr.append(right[j])
+        j+=1
+    return merged_arr
+# print(merge_sort([1,4,2,5,9,6,7]))
