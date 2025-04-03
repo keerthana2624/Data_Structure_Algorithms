@@ -629,26 +629,85 @@ def average_array(arr):
 # print(average_array([1,2,3,4,5]))
 
 
+
+
+# left_rotate
 def left_rotate(arr,k):
     n=len(arr)
     k=k%n
     for i in range(k):
-        last=arr[-1]
+        first=arr[0]
         for j in range(n-1):
             arr[j]=arr[j+1]
-        arr[n-1]=last
+        arr[n-1]=first
 arr=[1,2,3] 
 left_rotate(arr,2)
 # print(arr)       
 
+# right_rotate
+def right_rotate(arr,k):
+    n=len(arr)
+    k=k%n
+    for i in range(k):
+        last=arr[n-1]
+        for j in range(n-1,0,-1):
+            arr[j]=arr[j-1]
+        arr[0]=last
+arr=[1,2,3] 
+right_rotate(arr,2)
+# print(arr) 
+
+
+
+# def left(a,k):
+#     n=len(a)
+#     k=k%n
+#     for i in range(k):
+#         first=a[0]
+#         for j in range(n-1):
+#             a[j]=a[j+1]
+#         a[n-1]=first
+# a=[1,2,3,4]
+# left(a,2)
+
+# print(a)
+
+
+# seach for an element in an array
+
+
+def searching_ele(arr,t):
+    for i in range(len(arr)):
+        if arr[i]==t:
+            return i
+        else:
+            return 1
+# print(searching_ele([22,13,16,38],14))
+
+
+# # sort the elements of an array by frequency
+
+# def sort_frequency(arr):
+#     count={}
+#     for i in arr:
+#         if i in count:
+#             count[i]+=1
+#         else:
+#             count[i]=1
+    
+# print(sort_frequency([1,2,1,3,1,5,2,3]))
 
 
 
 
-
-
-
-
-
+def selection_sort(arr):
+    for i in range(len(arr)):
+        small=i
+        for j in range(i+1,len(arr)):
+            if arr[j]<arr[small]:
+                small=j
+        arr[i],arr[small]=arr[small],arr[i]
+    return arr
+# print(selection_sort([1,4,2,5,3]))
 
 
