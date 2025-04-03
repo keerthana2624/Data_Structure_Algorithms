@@ -528,27 +528,212 @@ def majority(arr):
 
 
     return most_frq
-print(majority([1,4,4,6,6,6,7]))
-
-
-
-
-
-
-
-
-
+# print(majority([1,4,4,6,6,6,7]))
 
 
 
 # 5.merge sorted arrays
+def mergeOfsorted(a1,a2):
+    i=0
+    j=0
+    merge=[]
+    while i<len(a1) and j<len(a2):
+        if a1[i]<a2[j]:
+            merge.append(a1[i])
+            i+=1
+        else:
+            merge.append(a2[j])
+            j+=1
+    while i<len(a1):
+        merge.append(a1[i])
+        i+=1
+    while j<len(a2):
+        merge.append(a2[j])
+        j+=1
+    return merge
+# print(mergeOfsorted([1,2,3,4],[5,6,7,8]))
+# print(mergeOfsorted([1,4,5,7],[2,3,6,8]))
 
-# def mergeOfsorted(a1,a2):
+
+# 6.reverse the given array 
+
+def reverseArray(arr):
+    start=0
+    end=len(arr)-1
+    while start<end:
+        arr[start],arr[end]=arr[end],arr[start]
+        start+=1
+        end-=1
+    return arr
+# print(reverseArray([1,2,3,4,6]))
+
+# 7.count the frequency of each element in an array
+
+def count_frequency(arr):
+    count={}
+    for i in arr:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+    return count
+# print(count_frequency([1,2,1,6,2,2,7,3,2]))
+
+
+# 8.finding the missing number in an array
+
+def find_missingNumber(arr):
+    n=len(arr)+1
+    total_sum=0
+    array_sum=0
+    for i in range(1,n+1):
+        total_sum+=i
+    for j in arr:
+        array_sum+=j
+    return total_sum-array_sum
+# print(find_missingNumber([1,3,4,5,6]))
+
+
+
+# 9.remove duplicates from sorted array
+
+def remove_dupli_sorted(arr):
+    new_array=[arr[0]]
+    for i in range(1,len(arr)):
+        if arr[i]!=arr[i-1]:
+            new_array.append(arr[i])
+    return new_array
+# print(remove_dupli_sorted([1,2,2,3,5]))
+
+
+
+# 10.calculating the sum of elements in an array
+
+def sum_elements(arr):
+    total=0
+    for i in arr:
+        total+=i
+    return total
+# print(sum_elements([1,2,3,2,2]))
+
+
+# find the average of all elements in on array
+
+def average_array(arr):
+    total=0
+    count=0
+    for i in arr:
+        total+=i
+        count+=1
+    return total/count
+# print(average_array([1,2,3,4,5]))
 
 
 
 
+# left_rotate
+def left_rotate(arr,k):
+    n=len(arr)
+    k=k%n
+    for i in range(k):
+        first=arr[0]
+        for j in range(n-1):
+            arr[j]=arr[j+1]
+        arr[n-1]=first
+arr=[1,2,3] 
+left_rotate(arr,2)
+# print(arr)       
 
+# right_rotate
+def right_rotate(arr,k):
+    n=len(arr)
+    k=k%n
+    for i in range(k):
+        last=arr[n-1]
+        for j in range(n-1,0,-1):
+            arr[j]=arr[j-1]
+        arr[0]=last
+arr=[1,2,3] 
+right_rotate(arr,2)
+# print(arr) 
+
+
+
+# def left(a,k):
+#     n=len(a)
+#     k=k%n
+#     for i in range(k):
+#         first=a[0]
+#         for j in range(n-1):
+#             a[j]=a[j+1]
+#         a[n-1]=first
+# a=[1,2,3,4]
+# left(a,2)
+
+# print(a)
+
+
+# seach for an element in an array
+
+
+def searching_ele(arr,t):
+    for i in range(len(arr)):
+        if arr[i]==t:
+            return i
+        else:
+            return 1
+# print(searching_ele([22,13,16,38],14))
+
+
+# # sort the elements of an array by frequency
+
+# def sort_frequency(arr):
+#     count={}
+#     for i in arr:
+#         if i in count:
+#             count[i]+=1
+#         else:
+#             count[i]=1
     
+# print(sort_frequency([1,2,1,3,1,5,2,3]))
 
 
+
+
+def selection_sort(arr):
+    for i in range(len(arr)):
+        small=i
+        for j in range(i+1,len(arr)):
+            if arr[j]<arr[small]:
+                small=j
+        arr[i],arr[small]=arr[small],arr[i]
+    return arr
+# print(selection_sort([1,4,2,5,3]))
+
+
+def merge_sort(arr):
+    if len(arr)<=1:
+        return arr
+    mid=len(arr)//2
+    left=merge_sort(arr[:mid])
+    right=merge_sort(arr[mid:])
+    return merge(left,right)
+def merge(left,right):
+    i=0
+    j=0
+    merged_arr=[]
+    while i<len(left) and j<len(right):
+        if left[i]<right[j]:
+            merged_arr.append(left[i])
+            i+=1
+        else:
+            merged_arr.append(right[j])
+            j+=1
+    while i<len(left):
+        merged_arr.append(left[i])
+        i+=1
+    while j<len(right):
+        merged_arr.append(right[j])
+        j+=1
+    return merged_arr
+# print(merge_sort([1,4,2,5,9,6,7]))
