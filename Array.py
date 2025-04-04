@@ -699,7 +699,7 @@ def searching_ele(arr,t):
 
 
 
-
+# selection sort
 def selection_sort(arr):
     for i in range(len(arr)):
         small=i
@@ -711,6 +711,20 @@ def selection_sort(arr):
 # print(selection_sort([1,4,2,5,3]))
 
 
+# insertion sort
+
+def insertion_sort(arr):
+    for i in range(1,len(arr)):
+        key=arr[i]
+        j=i-1
+        while j>=0 and arr[j]>key:
+            arr[j+1]=arr[j]
+            j-=1
+        arr[j+1]=key
+    return arr
+# print(insertion_sort([1,5,2,6,3,4]))
+
+# merge sort
 def merge_sort(arr):
     if len(arr)<=1:
         return arr
@@ -737,3 +751,21 @@ def merge(left,right):
         j+=1
     return merged_arr
 # print(merge_sort([1,4,2,5,9,6,7]))
+
+
+
+# Quick_sort
+
+def quick_sort(arr):
+    if len(arr)<=1:
+        return arr
+    pivot=arr[-1]
+    left=[]
+    right=[]
+    for i in range(len(arr)-1):
+        if arr[i]<pivot:
+            left.append(arr[i])
+        elif arr[i]>pivot:
+            right.append(arr[i])
+    return quick_sort(left)+[pivot]+quick_sort(right)
+# print(quick_sort([ 1, 3, 12, 5, 14, 8, 11]))
