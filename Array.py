@@ -810,3 +810,12 @@ def move_zero_end(arr):
             a2.append(i)
     return a1+a2
 # print(move_zero_end([1,4,0,3,0,2,5,0]))
+
+
+# Print All Subarrays of an Array
+
+def subarrays_array(arr):
+    for i in range(len(arr)):
+        for j in range(i,len(arr)):
+            print(arr[i:j+1])
+# subarrays_array([1,2,3,4])
