@@ -782,3 +782,18 @@ def fibonaci(n):
         a,b=b,a+b
 # fibonaci(10)
 
+# factorial of n
+def factorial(n):
+    fact=1
+    while n>=1:
+        fact=fact*n
+        n-=1
+    print(fact)
+# factorial(5)
+
+def factorial(n):
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    return fact
+# print(factorial(n))
