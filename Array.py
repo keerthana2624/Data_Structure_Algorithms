@@ -769,3 +769,16 @@ def quick_sort(arr):
             right.append(arr[i])
     return quick_sort(left)+[pivot]+quick_sort(right)
 # print(quick_sort([ 1, 3, 12, 5, 14, 8, 11]))
+# print(quick_sort([ 1, 3, 12, 5, 14, 8, 11,2]))
+
+
+# Fibonacci series
+
+def fibonaci(n):
+    a=0
+    b=1
+    while a<=n:
+        print(a,end=' ')
+        a,b=b,a+b
+# fibonaci(10)
+
