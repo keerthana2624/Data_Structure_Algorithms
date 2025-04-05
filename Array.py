@@ -797,3 +797,16 @@ def factorial(n):
         fact=fact*i
     return fact
 # print(factorial(n))
+
+# Move All Zeros to End
+
+def move_zero_end(arr):
+    a1=[]
+    a2=[]
+    for i in arr:
+        if i!=0:
+            a1.append(i)
+        else:
+            a2.append(i)
+    return a1+a2
+# print(move_zero_end([1,4,0,3,0,2,5,0]))
