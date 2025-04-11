@@ -819,3 +819,16 @@ def subarrays_array(arr):
         for j in range(i,len(arr)):
             print(arr[i:j+1])
 # subarrays_array([1,2,3,4])
+
+# Buy and Sell Stock
+
+def Max_profit(arr):
+    min_price=float('inf')
+    Max_profit=0
+    for price in arr:
+        if price<min_price:
+            min_price=price
+        elif price-min_price>Max_profit:
+            Max_profit=price-min_price
+    return Max_profit
+# print(Max_profit([7,3,1,9]))
