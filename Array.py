@@ -836,8 +836,18 @@ def Max_profit(arr):
 
 
 
-
-
+# find the second largest numbers from the given array
+def second_largest(arr):
+    first=0
+    second=0
+    for i in arr:
+        if i>first:
+            second=first
+            first=i     
+        elif i!=first and i>second:
+            second=i
+    return second
+# print(second_largest([2,7,1,4,9]))
 
 
 
