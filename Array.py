@@ -850,4 +850,15 @@ def second_largest(arr):
 # print(second_largest([2,7,1,4,9]))
 
 
+def sum_sub_arr(arr,t):
+    Result=[]
+    for i in range(len(arr)):
+        for j in range(i,len(arr)):
+            sub_arr=arr[i:j+1]
+            # print(sub_arr)
+            if sum(sub_arr)==t:
+                Result.append(sub_arr)
+    return Result
+# print(sum_sub_arr([1,2,2,2,3,4,2, 7, 6, 4,1,1],6))
+
 
