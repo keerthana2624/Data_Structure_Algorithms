@@ -859,6 +859,6 @@ def sum_sub_arr(arr,t):
             if sum(sub_arr)==t:
                 Result.append(sub_arr)
     return Result
-# print(sum_sub_arr([1,2,2,2,3,4,2, 7, 6, 4,1,1],6))
+# print(sum_sub_arr([1,2,2,2,3,4,2, 7, 6, 4,1,1],7))
 
 
