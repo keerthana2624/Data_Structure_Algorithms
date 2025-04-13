@@ -148,6 +148,24 @@ def max_occurence(string):
 
 
             
+# finding the longest consecutive from the given string
+
+def longest_consecutive(s):
+    longest_char=s[0]
+    longest_char_count=1
+    current_char=s[0]
+    current_char_count=1
+    for i in range(1,len(s)):
+        if s[i]==current_char:
+            current_char_count+=1
+        else:
+            current_char=s[i]
+            current_char_count=1
+    if current_char_count>longest_char_count:
+        longest_char_count=current_char_count
+        longest_char=current_char
+    return longest_char
+# print(longest_consecutive("keeeerthiiiiiii"))
 
 
 

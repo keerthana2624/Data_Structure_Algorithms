@@ -769,3 +769,96 @@ def quick_sort(arr):
             right.append(arr[i])
     return quick_sort(left)+[pivot]+quick_sort(right)
 # print(quick_sort([ 1, 3, 12, 5, 14, 8, 11]))
+# print(quick_sort([ 1, 3, 12, 5, 14, 8, 11,2]))
+
+
+# Fibonacci series
+
+def fibonaci(n):
+    a=0
+    b=1
+    while a<=n:
+        print(a,end=' ')
+        a,b=b,a+b
+# fibonaci(10)
+
+# factorial of n
+def factorial(n):
+    fact=1
+    while n>=1:
+        fact=fact*n
+        n-=1
+    print(fact)
+# factorial(5)
+
+def factorial(n):
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    return fact
+# print(factorial(n))
+
+# Move All Zeros to End
+
+def move_zero_end(arr):
+    a1=[]
+    a2=[]
+    for i in arr:
+        if i!=0:
+            a1.append(i)
+        else:
+            a2.append(i)
+    return a1+a2
+# print(move_zero_end([1,4,0,3,0,2,5,0]))
+
+
+# Print All Subarrays of an Array
+
+def subarrays_array(arr):
+    for i in range(len(arr)):
+        for j in range(i,len(arr)):
+            print(arr[i:j+1])
+# subarrays_array([1,2,3,4])
+
+# Buy and Sell Stock
+
+def Max_profit(arr):
+    min_price=float('inf')
+    Max_profit=0
+    for price in arr:
+        if price<min_price:
+            min_price=price
+        elif price-min_price>Max_profit:
+            Max_profit=price-min_price
+    return Max_profit
+# print(Max_profit([7,3,1,9]))
+
+
+
+
+# find the second largest numbers from the given array
+def second_largest(arr):
+    first=0
+    second=0
+    for i in arr:
+        if i>first:
+            second=first
+            first=i     
+        elif i!=first and i>second:
+            second=i
+    return second
+# print(second_largest([2,7,1,4,9]))
+
+
+def sum_sub_arr(arr,t):
+    Result=[]
+    for i in range(len(arr)):
+        for j in range(i,len(arr)):
+            sub_arr=arr[i:j+1]
+            # print(sub_arr)
+            if sum(sub_arr)==t:
+                Result.append(sub_arr)
+    return Result
+# print(sum_sub_arr([1,2,2,2,3,4,2, 7, 6, 4,1,1],7))
+
+
