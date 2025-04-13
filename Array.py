@@ -832,3 +832,12 @@ def Max_profit(arr):
             Max_profit=price-min_price
     return Max_profit
 # print(Max_profit([7,3,1,9]))
+
+
+
+
+
+
+
+
+
